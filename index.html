@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best IT Training Institute</title>
+    <style>
+        body {
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0;
+            text-align: center;
+        }
+        footer {
+            padding: 20px;
+            margin-bottom: auto;
+        }
+        nav p {
+            margin-left: 250px;
+            font-size:20px;
+        }
+        nav {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color:cornsilk;
+            color: black;
+            padding: 5px 20px;
+
+        }
+        nav img {
+            width: 15%;
+            height: 100%;
+            display: flex;
+            object-fit: cover;
+            margin: 0;
+        }
+        
+        .place-section{
+            background-color: #ddd;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+        nav ul li {
+            position: relative;
+            margin-right: 40px;
+        }
+        nav ul li a {
+            font-size: 20px;
+            color: black;
+            text-decoration: none;
+            padding: 8px 10px;
+            display: inline-block;
+
+        }
+        nav ul li:hover > a {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 4px;
+        }
+        nav ul li .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            min-width: 180px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            z-index: 10;
+        }
+        nav ul li:hover .dropdown {
+            display: block;
+        }
+        nav ul li .dropdown li {
+            margin: 0;
+        }
+        nav ul li .dropdown li a {
+            display:block;
+            width:inherit;
+            padding: 10px 16px;
+            color: #333;
+            text-align: left;
+        }
+        nav ul li .dropdown li a:hover {
+            background-color: #f0f0f0;
+        }
+        marquee {
+           background-color: #ffeb3b;
+           color: #000;
+           font-size: 18px;
+           font-weight: bold;
+           padding: 20px;
+        }
+
+        .course{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 50px;
+            background-color:bisque;
+        }
+        .course img{
+            height: 100px;
+            margin: 10px;
+        }
+        .place {
+            margin: 0;
+            padding: 0;
+            background-color:#ccc;
+            display: block;
+            margin-bottom: 0px;
+        }
+        .place img {
+            display: inline-block;
+            height: 100px;
+            margin: 0 20px;
+        }
+        section.course{
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            padding: 20px;
+            text-align: center;
+            background-image: url('https://images.unsplash.com/photo-1518655048521-f130df041f66?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fHdlYnNpdGUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww');
+            background-size: cover;
+            background-position: center;
+        }
+        section.course button {
+            font-size:16px;
+            padding: 12px 24px;
+            background-color: #4caf50;
+            color:white;
+            font-weight: 500;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;      
+        }
+
+        section button:hover {
+            background-color:#132d83;
+        }
+        section.course p{
+            color:#000;
+            font-size: 25px;
+            margin: 0 0 6px 0;
+            max-width: 900px;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 42px;
+            padding: 30px;
+            background-color: #f5f5f5;
+        }
+        .card {
+            width: 280px;
+            padding: 18px;
+            border: 1px solid #ddd;
+            border-radius: 16px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            background-color: #fff;
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 14px;
+        }
+        .card p {
+            margin: 0 0 14px;
+            color: #333;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .card button {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .card button:hover {
+            background-color: #132d83;
+        }
+     
+    #map {
+        display:inline-flex;
+        gap: 20px;
+        padding: 40px;
+        background-color :white;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    #map iframe {
+        flex: 1;
+        min-width: 300px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px black;
+    }
+    div{
+        font-family:Verdana, Geneva, Tahoma, sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+      div.form {
+        align-content: end;
+        min-width: 300px;
+        background-color:gainsboro;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    div.form label {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        color:black;
+        font-weight: 600;
+
+    }
+
+      div.form input,div.form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid black;
+        border-radius: 4px;
+        font-family:'Times New Roman', Times, serif;
+        box-sizing: border-box;
+      }
+
+      div.form button{
+            margin-top: 16px;
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+    }
+
+    section.lead {
+        display: flex;
+        gap: 24px;
+        padding: 30px;
+        text-align: left;
+    }
+
+    section.lead img {
+        max-width:100%;
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        margin:left;
+    }
+    .lead div{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size:x-large;
+    }
+      table {
+            margin-left: 350px;
+            width: 50%;
+            border-collapse: collapse;
+        }
+     th {
+            font-size:25px;
+            font-family:'Times New Roman', Times, serif;
+            border: 1px solid black;
+            padding: 8px;
+            text-align:center;
+            background-color:aquamarine;
+        }
+        td {
+            font-family:cursive;
+            border: 1px solid black;
+            padding: 8px;
+            text-align:center;
+            color:#000;
+            font-size:medium;
+        }
+        tr:nth-child(even) td {
+            background-color:whitesmoke;
+        }
+     .reviews {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 42px;
+            padding: 30px;
+            background-color:ghostwhite;
+        }
+        .review {
+            width: 280px;
+            padding: 18px;
+            border: 1px solid #ddd;
+            border-radius: 16px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            background-color:white;
+            text-align: center;
+        }
+        .review img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 14px;
+        }
+        .review p{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 16px;
+        }
+        .review button{
+            font-size: 16px;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+         .review button:hover {
+            background-color: #132d83;
+        }
+        footer {
+            padding:10px;
+            font-size: 16px;
+            color: #000;
+            background-color:deepskyblue;
+        }
+     
+
+    @media(max-width: 600px){
+        .row{
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+</style>
+</head>
+<body>
+    <nav>
+      
+        <img src="https://elysiumacademy.org/nitropack_static/hDDsfLtKGsilxmYIABVopItBcesTtTjK/assets/images/optimized/rev-a6b568e/elysiumacademy.org/wp-content/uploads/2024/03/Logo-2.png" alt="">
+          <p>📧 - Contact us@elysium techonologies.com</p>
+       <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li>
+                <a href="services.html">Services</a>
+                <ul class="dropdown">
+                    <li><a href="services.html">Placement Training</a></li>
+                    <li><a href="services.html">Carrer Guidance</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Support us</a></li>
+        </ul>
+        </nav>
+        <marquee behavior="scroll" direction="left" scrollamount="6">
+    📱 +91 98765 43210 | 📞 Call us now for Course Enquiry | ✉️ info@elysiumtechnologies.com
+</marquee>
+    <section class="course">
+
+    <p>Welcome to Elysium Technologies!
+        Your Learning, Your Pace: Explore, Master, Succeed!!
+    Choose from 1300+ exclusive courses with new courses being published every month.
+    Find Our Perfect Free Resources to Enhance Your Skills Now!
+</p>
+    <button>Get Started</button>
+    </section>
+    <div><h3>Our Accreditations & Partnerships</h3></div>
+    <marquee class="course">
+        <img src="https://www.guvi.in/assets/BIsdws_8-iit-ropar.webp" alt="">
+        <img src="https://www.guvi.in/assets/CnnFx7sx-swayam-plus.webp" alt="">
+        <img src="https://www.guvi.in/assets/DVq3f3xP-autodesk.webp" alt="">
+        <img src="https://www.guvi.in/assets/BCPcGBgM-naan-mudhalvan.webp" alt="">
+        <img src="https://www.guvi.in/assets/C6rKRY5L-anna-university-chennai.webp" alt="">
+        <img src="https://www.guvi.in/assets/BRwkyvhT-nsdc.webp" alt="">
+        <img src="https://www.guvi.in/assets/BO405Vrs-iit-kanpur.webp" alt="">    
+    </marquee>
+    <div>
+  <h2>🔴 LIVE Classes + Placement Guidance</h2>
+  <p style="width: 900px; margin: auto; margin-bottom: 20px;font-size:20px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">HCL Elysium offers one of the industry's leading Project-Based Career Programs with Live Instructor-Led Classes and Placement Guidance upon successful completion of the program.</p>
+</div>
+    <div class="cards">
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvlBsBmdj8vfQmPdPSo4x1QoTl-3BcWcProaSSKT2WBQ&s=10" alt="Web development course">
+            <p>Enroll for web development course</p>
+            <button><a href="courses.html" style="color: white; text-decoration: none; display: inline-block; width: 100%;">Syllabus</a></button>
+            <button>Enroll now</button>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkDjjANe1X2u5dn05CTuaXyGImKJEk8bSuCl03U_DIoQ&s=10" alt="Data science course">
+            <p>Enroll now for Data science course</p>
+            <button><a href="courses.html" style="color: white; text-decoration: none; display: inline-block; width: 100%;">Syllabus</a></button>
+            <button>Enroll now</button>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG1hqMK8gFNenre1X6B_mVajHmaITyNFa6BOOL0Dsrvg&s=10" alt="App development course">
+            <p>Enroll for App development course</p>
+             <button><a href="courses.html" style="color: white; text-decoration: none; display: inline-block; width: 100%;">Syllabus</a></button>
+            <button>Enroll now</button>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpJZQW3tYLwIhiVqCJLAL1fc37VucPahYh1yEqGn-RyA&s=10" alt="App development course">
+            <p>Enroll now for UI/UX Design course</p>
+             <button><a href="courses.html" style="color: white; text-decoration: none; display: inline-block; width: 100%;">Syllabus</a></button>
+            <button>Enroll now</button>
+            
+        </div>
+
+<section class="place-section">
+    <h1>Where Do Our Students Work?</h1>
+
+    <marquee behavior="scroll" direction="right" class="place">
+        <img src="https://www.guvi.in/assets/BCqZ5u0O-lenovo.webp" alt="">
+        <img src="https://www.guvi.in/assets/cZULMhV6-just-dial.webp" alt="">
+        <img src="https://www.guvi.in/assets/daYTQfl9-larsen.webp" alt="">
+        <img src="https://www.guvi.in/assets/BeM-RDUa-amazon.webp" alt="">
+        <img src="https://www.guvi.in/assets/fQGtF5GR-siemens.webp" alt="">
+        <img src="https://www.guvi.in/assets/BT5qwU2l-ideas.webp" alt="">
+        <img src="https://www.guvi.in/assets/ByDjBcTe-grappus.webp" alt="">
+        <img src="https://www.guvi.in/assets/BDotq-vn-fiserv.webp" alt="">
+        
+    </marquee>
+    <marquee behavior="scroll" direction="left" class="place">
+        <img src="https://www.guvi.in/assets/Df40G6-P-zoho.webp" alt="">
+        <img src="https://www.guvi.in/assets/Dr0tIfCe-caratlane.webp" alt="">
+        <img src="https://www.guvi.in/assets/FJ_EISf5-infosys.webp" alt="">
+        <img src="https://www.guvi.in/assets/CtP46enr-tcs.webp" alt="">
+        <img src="https://www.guvi.in/assets/D9Q13NB9-virtusa.webp" alt="">
+        <img src="https://www.guvi.in/assets/ULW7USSC-tech-mahindra.webp" alt="">
+        <img src="https://www.guvi.in/assets/W20CtA9i-cognizant.webp" alt="">
+        <img src="https://www.guvi.in/assets/C4UufyUF-capgemini.webp" alt="">
+    </marquee>
+</section>
+    </div>
+<section class="lead">
+<img src="https://www.guvi.in/assets/DUN3iNaq-women-with-notebook-latest.webp" alt="">
+<div>
+<h2>EdTech Platform for Learning in Native Languages.</h2>
+<p>Elysium, backed by IIT-M, IIM-A, and HCL, is India’s top tech-driven EdTech platform for learning in regional and global languages. 
+With 3M+ learners worldwide, it offers personalized online learning, upskilling, and job opportunities.business logo for Elysium for corporates
+Specialized Corporate Training group of persons Streamlined Corporate Hiring search for professionals Corporate Social Responsibility hyre assessment platform
+HYRE assessment hire professionals End-to-End Campus Hiring.
+</p>
+</div>
+</section>
+<section>
+    <h2>Academy Working Days and Hours</h2>
+    <table>
+        <tr>
+            <th>Working Days</th>
+            <th>Working Hours</th>
+        </tr>
+        <tr>
+            <td>Sunday</td>
+            <td>Holiday</td>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>9:30 am – 8:30 pm</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>9:30 am – 8:30 pm</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>9:30 am – 8:30 pm</td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>9:30 am – 8:30 pm</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>9:30 am – 8:30 pm</td>
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td>9:30 am – 8:30 pm</td>
+        </tr>
+
+    </table>
+</section>
+        <div id="map">
+            <iframe src="https://maps.google.com/maps?q=Elysium%20Academy%20Hosur&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                 width="600"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"></iframe>
+
+         <div class="form">
+            <form action="submit.html" method="post">
+             <label for="name">Name:</label>
+             <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+           <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+ </div>
+</div>
+<div>
+    <h2>Student Testimonials & Success Stories</h2>
+<div class="reviews">
+    <div class="review">
+        <img src="https://www.guvi.in/assets/aWQNIgNg-learner-3.webp" alt="">
+        <p>⭐⭐⭐⭐⭐ "I completed the Web Development course at Elysium Academy and had a great learning experience. The trainers explained HTML, CSS, JavaScript, and modern web technologies in a clear and practical manner."</p>
+        <button>View Course</button>
+    </div>
+    <div class="review">
+        <img src="https://www.guvi.in/assets/Bro8Zy6f-learner-11.webp"alt="">
+        <p>⭐⭐⭐⭐ "The Data Science training at Elysium Academy was excellent. The course covered Python, data analysis, machine learning, and visualization tools with real-time examples. The trainers were knowledgeable."</p>
+        <button>View Course</button>
+    </div>
+        <div class="review">
+        <img src="https://www.guvi.in/assets/DfBgHrU6-learner-2.webp"alt="">
+        <p>⭐⭐⭐⭐⭐ "I enrolled in the App Development course and found it very informative and industry-focused. The training included mobile application design, development concepts, and project implementation."</p>
+        <button>View Course</button>
+    </div>
+    <div class="review">
+        <img src="https://www.guvi.in/assets/By224FLb-learner-5.webp" alt="">
+        <p>⭐⭐⭐⭐ "The UI/UX Development course at Elysium Academy exceeded my expectations. The trainers provided detailed insights into user interface design, user experience principles."</p>
+        <button>View Course</button>
+    </div>
+    
+</div>
+    </div>
+    <footer>
+        <h4>Copyright © Elysium Academy 2026 | A Part of Elysium Groups | Cookie Policy | Terms & Condition | Terms of Use | Privacy Policy
+
+        </h4>
+</footer>
+</body>
+</html>
